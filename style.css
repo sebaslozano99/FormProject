@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;1,100;1,200;1,300&family=Caveat:wght@400;500;600&family=Nunito:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 3em 0 3em;
+    height: 3em;
+    z-index: 1;
+    /* border: 1px solid red; */
+}
+
+/* logo code  */
+.header .logo{
+    color: #000;
+    font-size: 2em;
+}
+
+.header .logo span{
+    color: rgb(0, 212, 212);
+    font-weight: bold;
+}
+/* logo code ends here */
+
+
+.header a{
+    text-decoration: none;
+}
+
+
+
+.header .menu{
+    list-style: none;
+    display:flex;
+}
+
+.header .menu li a{
+    padding: 0 1em;
+    color: #000;
+    font-size: 1.2em;
+}
+
+.header .menu li a:hover{
+    color: rgb(0, 212, 212);
+    transition: all .5s;
+}
+
+
+/* burger menu's code begins here */
+
+.header .burger{
+    cursor: pointer;
+    display: none;
+}
+
+.header .burger .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 3px auto;
+    transition: all .3s ease-in-out;
+}
+
+
+@media(max-width:800px){
+    .header .burger{
+        display: block;
+    }
+
+    .header .burger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .header .burger.active .bar:nth-child(1){
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .header .burger.active .bar:nth-child(3){
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .header .menu{
+        background-color: #eee;
+        position: fixed;
+        left: -100%;
+        top: 3em;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        transition: .3s;
+    }
+
+    .header .menu li{
+        padding: 0.5em 0;
+        /* border: 1px solid red; */
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header .menu li:hover{
+        background-color: rgb(0, 212, 212);
+        transition: all .8s;
+    }
+
+    .header .menu.active{
+        left: 0;
+    }
+
+    .header .menu li a{
+        /* border: 1px solid red; */
+        display: block;
+    }
+
+    .header .menu li a:hover{
+        color: #fff;
+    }
+}
+
+/* header's code ends here */
+
+
+
+
+
+
+/* container's code*/
+
+main .container-one{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+main .container-one .boxOne{
+    width: 50%;
+    height: 90vh;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+main .container-one .boxOne h3{
+    font-size: 2em;
+}
+
+main .container-one .boxOne h3 span{
+    color: rgb(0, 212, 212);
+}
+
+
+main .container-one .boxOne p{
+    width: 95%;
+    font-size: 1.2em;
+    margin-left: 3em;
+    margin-top: 1em;
+}
+
+
+main .container-one .boxOne .buttons{
+    width: 15em;
+    justify-content: space-between;
+    display: flex;
+    align-items: baseline;
+    /* border: 1px solid red; */
+    position: relative;
+    left: -23%;
+    margin-top: 1em;
+}
+
+
+main .container-one .boxOne .buttons button{
+    background-color: rgb(0, 212, 212);
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    border-style: none;
+    cursor: pointer;
+}
+
+main .container-one .boxOne .buttons button:hover{
+    transform: scale(1.02);
+    transition: .5s;
+}
+
+main .container-one .boxOne .buttons a{
+    text-decoration: none;
+    color: #000;
+}
+
+main .container-one .boxOne .buttons a:hover{
+    color: rgb(0, 212, 212);
+    transition: all .5s;
+}
+
+
+main .container-one .image{
+    /* border: 1px solid rgb(98, 255, 0); */
+    width: 50%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .container-one .image img{
+    width: 30em;
+}
+
+
+@media(max-width: 800px){
+    /* html{
+        overflow: hidden;
+    } */
+
+    main .container-one{
+        flex-direction: column;
+    }
+
+    main .container-one .boxOne{
+        width: 100%;
+    }
+
+    
+    main .container-one .boxOne h3{
+        font-size: 1.8em;
+    }
+
+    main .container-one .boxOne p{
+        font-size: 1em;
+        margin-left: 1em;
+    }
+
+
+
+    main .container-one .image{
+        width: 90%;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+        z-index: -1;
+        opacity: 20%;
+    }
+
+    main .container-one .image img{
+        width: 15em;
+    }
+}
+
+
+
+/* page two */ 
+
+.page-two{
+    height: 90vh;
+    display: flex;
+    width: 100%;
+    padding: 0 3em;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    transition: ease-in-out .5s;
+    position: fixed;
+    top: 3em;
+    left: -100%;
+}
+
+.page-two.active{
+    left: 0;
+}
+
+
+.page-two #exit{
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.page-two #exit:hover{
+    color: rgb(0, 212, 212);
+}
+
+
+
+.page-two .boxOne{
+    /* border: 1px solid red; */
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+
+.page-two .boxOne h3{
+    color: rgb(0, 212, 212);
+}
+
+
+
+.page-two.boxOne form{
+    display: flex;
+    flex-direction: column;
+    /* border: 6px solid green; */
+}
+
+
+.page-two .boxOne form textarea{
+    width: 90%;
+    font-size: 1.2em;
+    border-style: none;
+    background-color: #eee;
+    box-shadow: 1px 1px 10px;
+}
+
+
+.page-two .boxOne form textarea:hover{
+    transform: scale(1.01);
+    transition: .5s;
+}
+
+
+
+.page-two .boxOne button{
+    background-color: rgb(0, 212, 212);
+    color: #fff;
+    font-size: 1.3em;
+    border-style: none;
+    padding: 0.3em;
+    border-radius: 0.4em;
+    cursor: pointer;
+    width: 90%;
+}
+
+
+.page-two .boxOne button:hover{
+    transform: scale(1.02);
+    transition: .5s;
+}
+
+
+
+.page-two .boxTwo img{
+    width: 35em;
+    /* border: 1px solid red; */
+}
+
+
+@media(max-width: 800px){
+    
+    .page-two-one{
+        flex-direction: column;
+        margin-top: 3em;
+    }
+
+    /* .container-one .boxOne{
+        border: 1px solid red;
+    } */
+
+
+    
+    .page-two .boxTwo{
+        display: none;
+    }
+}
